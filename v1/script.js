@@ -54,9 +54,8 @@ loadFacts();
 async function loadFacts() {
     const res = await fetch('https://dsawgsrsdlhpnngzsobv.supabase.co/rest/v1/facts', {
         headers: {
-            apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzYXdnc3JzZGxocG5uZ3pzb2J2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzIwMDQwMjMsImV4cCI6MTk4NzU4MDAyM30.vvolYI1KPf6aaLxP4tB1jXYkrnSk7qD8WZVkfbQhqZ8',
-            authorization:
-                'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzYXdnc3JzZGxocG5uZ3pzb2J2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzIwMDQwMjMsImV4cCI6MTk4NzU4MDAyM30.vvolYI1KPf6aaLxP4tB1jXYkrnSk7qD8WZVkfbQhqZ8',
+            apikey: '?',
+            authorization: '?',
         },
     });
 
