@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import supabase from './supabase';
+
 import './style.css';
 
 const initialFacts = [
@@ -36,16 +38,25 @@ const initialFacts = [
 
 const App = () => {
     const [showForm, setShowForm] = useState(false);
+    const [facts, setFacts] = useState([]);
+
+    useEffect(() => {
+        const getFacts = async () => {
+            const { data: facts, error } = await supabase.from('facts').select('*');
+            setFacts(facts);
+        };
+        getFacts();
+    }, []);
 
     return (
         <>
             <Header setShowForm={setShowForm} showForm={showForm} />
 
-            {showForm ? <NewFactForm /> : null}
+            {showForm ? <NewFactForm setFacts={setFacts} setShowForm={setShowForm} /> : null}
 
             <main className="main">
                 <CategoryFilter />
-                <FactList />
+                <FactList facts={facts} />
             </main>
         </>
     );
@@ -89,7 +100,7 @@ const isValidHttpUrl = (string) => {
     return url.protocol === 'http:' || url.protocol === 'https:';
 };
 
-const NewFactForm = () => {
+const NewFactForm = ({ setFacts, setShowForm }) => {
     const [text, setText] = useState('');
     const [source, setSource] = useState('http://example.com');
     const [category, setCategory] = useState('');
@@ -110,7 +121,13 @@ const NewFactForm = () => {
                 createdIn: new Date().getFullYear(),
             };
 
-            console.log(newFact);
+            setFacts((prev) => [newFact, ...prev]);
+
+            setText('');
+            setSource('');
+            setCategory('');
+
+            setShowForm(false);
         }
     };
 
@@ -162,10 +179,7 @@ const CategoryFilter = () => {
     );
 };
 
-const FactList = () => {
-    // TEMPORARY
-    const facts = initialFacts;
-
+const FactList = ({ facts }) => {
     return (
         <section>
             <ul className="facts-list">
