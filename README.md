@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Today I learned
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+The project is a full-stack application designed for users to save and browse information (facts) that are added to a shared database. Users can add new facts and their sources to verify their credibility, as well as create categories for easy organization. Users can rate the knowledge content. The fact list can be filtered by categories, making it easier to find relevant information. The application is built using React and a database created with Supabase.
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+* React
+* Supabase
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Launch
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://todayilearned-web-app.netlify.app/
 
-### `npm test`
+## Illustrations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="1238" alt="image" src="https://user-images.githubusercontent.com/73105872/221407739-dfc593cc-2df8-4038-8c83-8761d3afac77.png">
 
-### `npm run build`
+## Scope of functionalities
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application allows users to create and store facts in a shared database. Users can also add sources to verify the credibility of the facts and create categories for easy organization. Users can rate the knowledge content to indicate its accuracy. The application also includes a filter function that allows users to easily find facts based on categories. The application is built using React and a database created with Supabase, allowing for efficient data storage and retrieval. The application is fully responsive, making it accessible on various devices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project status
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project is complete and functional, as it was created as part of a web development course.
 
-### `npm run eject`
+## Sources
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The project was created as part of the "Crash Course: Build a Full-Stack Web App in a Weekend" course by Jonas Schmedtmanna.
